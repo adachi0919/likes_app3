@@ -16,7 +16,10 @@
       <a href="/posts/<%= post.id %>"><%= post.content %></a>
       (<%= post.liked_users.count %>)
     </li>
+  <% end %>
 
+  <% @all_ranks.each.with_index(1) do |post, i| %>
+    <p>第<%= i %>位 <%= post.content %></p>
   <% end %>
 
 <% else %>
